@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Noticias</title>
+    <link rel="stylesheet" href="/assets/css/style2.css">
+</head>
+<body>
+    <h2>Buscador de noticias</h2>
+    <form action="/" method="get">
+        <input type="text" name="query" placeholder="Ingrese su búsqueda">
+        <button type="submit">Buscar</button>
+    </form>
+    
+    {{#if news}}
+        <ul>
+            {{#each news.articles}}
+                <li><a href="{{this.url}}" target="_blank">{{this.title}}</a></li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</body>
+</html>
